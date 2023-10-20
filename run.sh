@@ -11,17 +11,18 @@ curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr
 chmod a+rx /usr/local/bin/yt-dlp
 
 #install go
-wget https://dl.google.com/go/go1.20.4.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.20.4.linux-amd64.tar.gz
-echo export PATH=$PATH:/usr/local/go/bin >> ~/.profile
-echo go env -w GO111MODULE=on >> ~/.profile
-source ~/.profile
-mkdir ~/go
+curl -L https://dl.google.com/go/go1.20.4.linux-amd64.tar.gz -o /root/go1.20.4.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf /root/go1.20.4.linux-amd64.tar.gz
+echo export PATH=$PATH:/usr/local/go/bin >> /root/.profile
+echo go env -w GO111MODULE=on >> /root/.profile
+source /root/.profile
+mkdir /root/go
 
-cd go
+
+cd /root/go
 go install github.com/go-kratos/kratos/cmd/kratos/v2@latest
 git clone https://github.com/zhiguangq/youtubeFile.git
-cd youtubeFile
+cd /root/youtubeFile
 go build -o ./bin/ ./...
 nohup ./bin/linode -conf ./configs/ >a.log 2>&1 &
 
