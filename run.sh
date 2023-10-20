@@ -21,6 +21,7 @@ mkdir ~/go
 cd go
 go install github.com/go-kratos/kratos/cmd/kratos/v2@latest
 git clone https://github.com/zhiguangq/youtubeFile.git
+cd youtubeFile
 go build -o ./bin/ ./...
 nohup ./bin/linode -conf ./configs/ >a.log 2>&1 &
 
