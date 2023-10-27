@@ -32,7 +32,7 @@ apt-get install -y npm
 git clone https://github.com/zhiguangq/amis-admin.git
 cd cd amis-admin
 npm i
-nohup npm start >amis.log 2>&1 &
+nohup node server.js >amis.log 2>&1 &
 
 
 
