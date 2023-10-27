@@ -26,6 +26,19 @@ cd /root/youtubeFile
 go build -o ./bin/ ./...
 nohup ./bin/linode -conf ./configs/ >a.log 2>&1 &
 
+#install amis
+cd /root
+apt-get install -y npm
+git clone https://github.com/zhiguangq/amis-admin.git
+cd cd amis-admin
+npm i
+nohup npm start >amis.log 2>&1 &
+
+
+
+
+
+
 
 
 
