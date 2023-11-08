@@ -30,7 +30,7 @@ nohup ./bin/linode -conf ./configs/ >a.log 2>&1 &
 cd /root
 apt-get install -y npm
 git clone https://github.com/zhiguangq/amis-admin.git
-cd cd amis-admin
+cd amis-admin
 npm i
 nohup node server.js >amis.log 2>&1 &
 
