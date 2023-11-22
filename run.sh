@@ -19,7 +19,7 @@ source /root/.profile
 mkdir /root/go
 
 
-#cd /root/go
+cd /root/go
 #/usr/local/go/bin/go install github.com/go-kratos/kratos/cmd/kratos/v2@latest
 git clone https://github.com/zhiguangq/youtubeFile.git
 cd /root/go/youtubeFile
