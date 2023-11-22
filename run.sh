@@ -19,11 +19,12 @@ source /root/.profile
 mkdir /root/go
 
 
-cd /root/go
-/usr/local/go/bin/go install github.com/go-kratos/kratos/cmd/kratos/v2@latest
+#cd /root/go
+#/usr/local/go/bin/go install github.com/go-kratos/kratos/cmd/kratos/v2@latest
 git clone https://github.com/zhiguangq/youtubeFile.git
 cd /root/go/youtubeFile
-/usr/local/go/bin/go build -o ./bin/ ./...
+#/usr/local/go/bin/go build -o ./bin/ ./...
+chmod +x ./bin/linode
 nohup ./bin/linode -conf ./configs/ >a.log 2>&1 &
 
 #install amis
